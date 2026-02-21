@@ -26,10 +26,10 @@ export default function DailyCountsTable({ counts }: DailyCountsTableProps) {
 
   return (
     <div className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
-      <div className="p-4 border-b border-gray-100 flex flex-wrap items-center justify-between gap-3">
-        <div className="flex items-center gap-2">
-          <div className="p-2 rounded-lg bg-emerald-100">
-            <BarChart3 size={20} className="text-emerald-700" />
+      <div className="p-5 border-b border-gray-100 flex flex-wrap items-center justify-between gap-4">
+        <div className="flex items-center gap-3">
+          <div className="p-2.5 rounded-lg bg-emerald-100">
+            <BarChart3 size={22} className="text-emerald-700" />
           </div>
           <div>
             <h3 className="font-semibold text-gray-900">Counts per bus per day</h3>
@@ -62,19 +62,19 @@ export default function DailyCountsTable({ counts }: DailyCountsTableProps) {
         <table className="w-full text-sm">
           <thead>
             <tr className="bg-gray-50 border-b border-gray-100">
-              <th className="text-left py-3 px-4 font-semibold text-gray-700">
+              <th className="text-left py-3.5 px-5 font-semibold text-gray-700">
                 Bus
               </th>
-              <th className="text-left py-3 px-4 font-semibold text-gray-700">
+              <th className="text-left py-3.5 px-5 font-semibold text-gray-700">
                 Route
               </th>
-              <th className="text-right py-3 px-4 font-semibold text-gray-700">
+              <th className="text-right py-3.5 px-5 font-semibold text-gray-700">
                 Boardings
               </th>
-              <th className="text-right py-3 px-4 font-semibold text-gray-700">
+              <th className="text-right py-3.5 px-5 font-semibold text-gray-700">
                 Alightings
               </th>
-              <th className="text-right py-3 px-4 font-semibold text-gray-700">
+              <th className="text-right py-3.5 px-5 font-semibold text-gray-700">
                 Trips
               </th>
             </tr>
@@ -92,17 +92,17 @@ export default function DailyCountsTable({ counts }: DailyCountsTableProps) {
                   key={`${row.vehicleId}-${row.date}`}
                   className="border-b border-gray-100 hover:bg-gray-50/50"
                 >
-                  <td className="py-3 px-4 font-medium text-gray-900">
+                  <td className="py-3.5 px-5 font-medium text-gray-900">
                     {row.vehicleLabel}
                   </td>
-                  <td className="py-3 px-4 text-gray-600">{row.routeName}</td>
-                  <td className="py-3 px-4 text-right text-gray-700">
+                  <td className="py-3.5 px-5 text-gray-600">{row.routeName}</td>
+                  <td className="py-3.5 px-5 text-right text-gray-700">
                     {row.boardings}
                   </td>
-                  <td className="py-3 px-4 text-right text-gray-700">
+                  <td className="py-3.5 px-5 text-right text-gray-700">
                     {row.alightings}
                   </td>
-                  <td className="py-3 px-4 text-right font-medium text-[var(--p2p-primary-blue)]">
+                  <td className="py-3.5 px-5 text-right font-medium text-[var(--p2p-primary-blue)]">
                     {row.totalTrips}
                   </td>
                 </tr>
@@ -111,7 +111,7 @@ export default function DailyCountsTable({ counts }: DailyCountsTableProps) {
           </tbody>
         </table>
       </div>
-      <div className="px-4 py-2 bg-gray-50 text-xs text-gray-500 border-t border-gray-100">
+      <div className="px-5 py-3 bg-gray-50 text-sm text-gray-500 border-t border-gray-100">
         {displayDate}
       </div>
     </div>

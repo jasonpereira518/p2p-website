@@ -24,11 +24,11 @@ export default function FleetStatusCard({ status }: FleetStatusCardProps) {
 
   return (
     <div className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-      <div className="p-4">
+      <div className="p-5">
         <div className="flex items-start justify-between gap-2">
-          <div className="flex items-center gap-2">
-            <div className="p-2 rounded-lg bg-[var(--p2p-light-blue)]">
-              <Bus size={20} className="text-[var(--p2p-primary-blue)]" />
+          <div className="flex items-center gap-3">
+            <div className="p-2.5 rounded-lg bg-[var(--p2p-light-blue)]">
+              <Bus size={22} className="text-[var(--p2p-primary-blue)]" />
             </div>
             <div>
               <p className="font-semibold text-gray-900">
@@ -40,7 +40,7 @@ export default function FleetStatusCard({ status }: FleetStatusCardProps) {
             </div>
           </div>
           {!status.onRoute && (
-            <span className="flex items-center gap-1 px-2 py-1 rounded-lg bg-amber-100 text-amber-800 text-xs font-medium">
+            <span className="flex items-center gap-1 px-2 py-1 rounded-lg bg-amber-100 text-amber-800 text-xs font-medium shrink-0">
               <MapPin size={14} />
               Off route
             </span>

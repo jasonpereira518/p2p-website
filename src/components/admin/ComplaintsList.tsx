@@ -70,9 +70,9 @@ export default function ComplaintsList({ complaints }: ComplaintsListProps) {
 
   return (
     <div className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
-      <div className="p-4 border-b border-gray-100 flex items-center gap-2">
-        <div className="p-2 rounded-lg bg-red-100">
-          <AlertCircle size={20} className="text-red-700" />
+      <div className="p-5 border-b border-gray-100 flex items-center gap-3">
+        <div className="p-2.5 rounded-lg bg-red-100">
+          <AlertCircle size={22} className="text-red-700" />
         </div>
         <div>
           <h3 className="font-semibold text-gray-900">Complaints &amp; issues</h3>
@@ -83,15 +83,16 @@ export default function ComplaintsList({ complaints }: ComplaintsListProps) {
       </div>
       <ul className="divide-y divide-gray-100">
         {sorted.length === 0 ? (
-          <li className="p-6 text-center text-gray-500 text-sm">
+          <li className="p-8 text-center text-gray-500 text-sm">
             No complaints
           </li>
         ) : (
           sorted.map((c) => {
             const typeConfig = TYPE_CONFIG[c.type] ?? TYPE_CONFIG.other;
             const Icon = typeConfig.icon;
+            const vehicleDriver = [c.vehicleLabel, c.driverName].filter(Boolean).join(" · ");
             return (
-              <li key={c.id} className="p-4 hover:bg-gray-50/50">
+              <li key={c.id} className="p-5 hover:bg-gray-50/50">
                 <div className="flex flex-wrap items-start justify-between gap-2">
                   <div className="flex items-center gap-2 flex-wrap">
                     <span
@@ -105,17 +106,17 @@ export default function ComplaintsList({ complaints }: ComplaintsListProps) {
                     >
                       {c.status.replace("_", " ")}
                     </span>
-                    {(c.vehicleLabel || c.driverName) && (
-                      <span className="text-xs text-gray-500">
-                        {[c.vehicleLabel, c.driverName].filter(Boolean).join(" · ")}
+                    {vehicleDriver && (
+                      <span className="text-sm text-gray-500">
+                        {vehicleDriver}
                       </span>
                     )}
                   </div>
-                  <span className="text-xs text-gray-400">{formatDate(c.reportedAt)}</span>
+                  <span className="text-sm text-gray-400 shrink-0">{formatDate(c.reportedAt)}</span>
                 </div>
                 <p className="mt-2 text-sm text-gray-700">{c.description}</p>
                 {c.notes && (
-                  <p className="mt-1.5 text-xs text-gray-500 border-l-2 border-gray-200 pl-2">
+                  <p className="mt-2 text-sm text-gray-500 border-l-2 border-gray-200 pl-3">
                     Note: {c.notes}
                   </p>
                 )}

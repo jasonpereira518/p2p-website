@@ -21,16 +21,16 @@ export default function TeamCard({ users }: TeamCardProps) {
 
   return (
     <div className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
-      <div className="p-4 border-b border-gray-100 flex items-center gap-2">
-        <div className="p-2 rounded-lg bg-violet-100">
-          <Users size={20} className="text-violet-700" />
+      <div className="p-5 border-b border-gray-100 flex items-center gap-3">
+        <div className="p-2.5 rounded-lg bg-violet-100">
+          <Users size={22} className="text-violet-700" />
         </div>
         <div>
           <h3 className="font-semibold text-gray-900">Drivers &amp; managers</h3>
           <p className="text-sm text-gray-500">Team members with admin access</p>
         </div>
       </div>
-      <div className="p-4 space-y-4">
+      <div className="p-5 space-y-4">
         {admins.length > 0 && (
           <div>
             <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2 flex items-center gap-1.5">
