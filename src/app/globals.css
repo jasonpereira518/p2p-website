@@ -8,6 +8,16 @@
   --p2p-background: #FFFFFF;
   --p2p-light-blue: #B4D4E9;
   --p2p-light-red: #ECBCBA;
+  /* UNC Chapel Hill theme */
+  --unc-carolina-blue: #4B9CD3;
+  --unc-carolina-blue-light: #7BAFD4;
+  --unc-navy: #13294B;
+  --unc-navy-light: #1B3A6B;
+}
+
+.bg-unc-login {
+  background: linear-gradient(160deg, var(--unc-navy) 0%, var(--unc-navy-light) 40%, var(--unc-carolina-blue) 100%);
+  min-height: 100vh;
 }
 
 html {
@@ -24,4 +34,13 @@ body {
   height: 100%;
   width: 100%;
   z-index: 0;
+}
+
+/* Hide scrollbar for admin nav while keeping scroll */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }

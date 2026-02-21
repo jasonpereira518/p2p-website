@@ -110,9 +110,21 @@ export default function Home() {
         <h1 className="text-xl font-bold text-[var(--p2p-primary-blue)]">
           P2P Live
         </h1>
-        <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-[var(--p2p-light-blue)] text-[var(--p2p-primary-blue)]">
-          Live (Mock)
-        </span>
+        <div className="flex items-center gap-2">
+          <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-[var(--p2p-light-blue)] text-[var(--p2p-primary-blue)]">
+            Live (Mock)
+          </span>
+          <a
+            href="/admin"
+            className="flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium rounded-lg bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors"
+            aria-label="Admin login"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+            Admin
+          </a>
+        </div>
       </header>
 
       {/* Content */}
